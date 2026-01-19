@@ -1,0 +1,4 @@
+{
+    "gradle.nestedProjects": false,
+    "java.import.gradle.version": "4.4.1"
+}

@@ -1,0 +1,17 @@
+// 1. Task to generate the "dev" jar (unobfuscated code for developers)
+task devJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'dev'
+}
+
+// Task to generate sources (helpful for developers to see your code)
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allJava
+    classifier = 'sources'
+}
+
+// Tell Gradle to publish these jars alongside the main file
+artifacts {
+    archives devJar
+    archives sourcesJar
+}
